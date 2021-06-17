@@ -26,9 +26,10 @@ public class MyMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 			}
 			if (flag) {
 				context.write(new Text("Prime"), new IntWritable(number));
-			}else {
-				context.write(new Text("Composite"), new IntWritable(number));
 			}
+			// else {
+				// context.write(new Text("Composite"), new IntWritable(number));
+			// }
 		}
 	}
 }
